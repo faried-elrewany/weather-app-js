@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: hsl(200, 100%, 85%);
+  color: hsl(200, 100%, 10%);
+  font-family: sans-serif;
+  font-size: clamp(1.4rem, 2rem, 5vw);
+}
+.header {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+.header-left {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+  border-right: 2px solid hsl(200, 100%, 10%);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  /* gap: 1rem; */
+}
+.weather-icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+.weather-icon.large {
+  width: 8rem;
+  height: 8rem;
+}
+.header-current-temp {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header-right {
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-around;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+.info-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.label {
+  font-size: clamp(1.4rem, 2rem, 1.5rem);
+  color: hsl(200, 100%, 20%);
+  font-weight: bold;
+}
+.small-info {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.blur {
+  filter: blur(3px);
+}
+.day-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10rem);
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.25rem solid hsl(200, 100%, 10%);
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  gap: 0.3rem;
+}
+.day-card-day {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  color: hsl(200, 100%, 20%);
+}
+.hour-section {
+  margin-top: 2rem;
+  width: 100%;
+  border-spacing: 0;
+}
+.hour-row {
+  background-color: hsl(200, 100%, 75%);
+}
+.hour-row:nth-child(2n) {
+  background-color: hsl(200, 100%, 65%);
+}
+.hour-row > td {
+  padding: 0.5rem 1rem;
+}
